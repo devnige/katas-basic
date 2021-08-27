@@ -2,10 +2,10 @@
 *.log
 
 # ignore ALL files in ANY directory named temp
-temp/
+temp/*
 
 # ignore ALL files in ANY directory named obj
-obj/
+obj/*
 
 # ignore ALL files in ANY directory named bin
 bin/
