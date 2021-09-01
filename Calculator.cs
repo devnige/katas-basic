@@ -15,7 +15,6 @@ namespace basic_coding
             return sum;
         }
              
-        
         public int CalculateSumOfRemainder (int lastNum, int divisor1, int divisor2)
         {  
             var validator = new Validations ();
@@ -26,12 +25,22 @@ namespace basic_coding
             int sum = 0;
             for (var i=1; i<=lastNum; i++)
             {
-                if(i % divisor1 == 0 || i % divisor2 == 0)
+                if(i % divisor1 == 0 || i % divisor2 == 0) // conditional if i is divisible by divisor 1 or divisor 2
                 {
                     sum += i;
                 }
             }
             return sum;
+        }
+
+        public int CalculateProd (int lastNum)
+        {
+            int prod = 1; // can't be zero because it will always give a product of zero!
+            for (var i=1; i<=lastNum; i++)
+            {
+                prod *= i;
+            } 
+            return prod;
         }
 
 
