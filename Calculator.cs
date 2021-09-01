@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.ComponentModel.DataAnnotations;
 using System;
 
@@ -39,10 +40,23 @@ namespace basic_coding
             for (var i=1; i<=lastNum; i++)
             {
                 prod *= i;
-            } 
+            }
             return prod;
         }
 
-
+        public void MultiplyTable (int lastNum)
+        {
+            for(var i=1; i<=lastNum; i++)
+            {
+                for (var j=1; j<=10; j++)
+                {
+                    System.Console.WriteLine("{0}*{1}={2}", i, j, i*j);
+                }
+                System.Console.WriteLine();
+            }
+            // Keep the console open in debug mode
+            System.Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
     }
 }
